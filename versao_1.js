@@ -1,3 +1,33 @@
+if (confirm("Boas Vindas ao Jogo BlackJack \nQuer iniciar uma nova rodada?")) {
+   const cartaJogador = comprarCarta()
+   let pontuacaoJogador = cartaJogador.valor+cartaJogador.valor
+   console.log(`Usuário - cartas:${cartaJogador.texto}${cartaJogador.texto} - pontuação ${pontuacaoJogador}` );
+   const cartaComputador = comprarCarta()
+   let pontuacaoComputador = cartaComputador.valor+cartaComputador.valor
+   console.log(`Coputador - cartas:${cartaComputador.texto}${cartaComputador.texto} - pontuação ${pontuacaoComputador}` );
+
+   if ((pontuacaoJogador>pontuacaoComputador) && (pontuacaoJogador<21) || (pontuacaoComputador>21)) {
+      console.log("O Usuario ganhou!") 
+   } else if ((pontuacaoComputador>pontuacaoJogador) && (pontuacaoComputador <21) || (pontuacaoJogador>21)) {
+      console.log("O computador ganhou")
+   } else {
+      console.log("Empate!")
+   }
+} else {
+   console.log("O jogo acabou")
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
  * 
